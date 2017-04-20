@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['facerenderer',['FaceRenderer',['../classface__swap_1_1_face_renderer.html',1,'face_swap']]],
-  ['facerenderer',['FaceRenderer',['../classface__swap_1_1_face_renderer.html#ae5cd62a50923a4eaed86afe49d9995e5',1,'face_swap::FaceRenderer']]],
-  ['faceswap',['FaceSwap',['../classface__swap_1_1_face_swap.html#a4df085d8f07ad7811c11ac272de5e097',1,'face_swap::FaceSwap']]],
-  ['faceswap',['FaceSwap',['../classface__swap_1_1_face_swap.html',1,'face_swap']]]
+  ['rendersegmentationblend',['renderSegmentationBlend',['../utilities_8h.html#a091e03e680d152a1e56b0bb2c0bd40c1',1,'face_seg']]]
 ];
