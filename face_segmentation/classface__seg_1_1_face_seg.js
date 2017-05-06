@@ -1,6 +1,6 @@
 var classface__seg_1_1_face_seg =
 [
-    [ "FaceSeg", "classface__seg_1_1_face_seg.html#a3872f0931688c3a994f9145dba67a322", null ],
+    [ "FaceSeg", "classface__seg_1_1_face_seg.html#a63f7f191ff357297913a67bb1968aaea", null ],
     [ "~FaceSeg", "classface__seg_1_1_face_seg.html#a065321872eb27a946712f0a5efb5a5d9", null ],
     [ "process", "classface__seg_1_1_face_seg.html#a3296c135181c46c1c22b19c0421f8b18", null ],
     [ "m_input_size", "classface__seg_1_1_face_seg.html#a36ea9d087e683352ab9a2f8c806489b6", null ],

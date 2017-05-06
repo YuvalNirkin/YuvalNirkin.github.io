@@ -114,16 +114,16 @@ $(document).ready(function(){initNavTree('classface__seg_1_1_face_seg.html','');
 </div><!--header-->
 <div class="contents">
 
-<p>This class provided face segmentation using Caffe with a fully connected convolutional neural network.  
+<p>This class provided deep face segmentation using Caffe with a fully connected convolutional neural network.  
  <a href="classface__seg_1_1_face_seg.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="face__seg_8h_source.html">face_seg.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3872f0931688c3a994f9145dba67a322"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classface__seg_1_1_face_seg.html#a3872f0931688c3a994f9145dba67a322">FaceSeg</a> (const std::string &amp;deploy_file, const std::string &amp;caffe_model_file, bool with_gpu=true, int gpu_device_id=0)</td></tr>
-<tr class="memdesc:a3872f0931688c3a994f9145dba67a322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="classface__seg_1_1_face_seg.html" title="This class provided face segmentation using Caffe with a fully connected convolutional neural network...">FaceSeg</a> instance.  <a href="#a3872f0931688c3a994f9145dba67a322">More...</a><br /></td></tr>
-<tr class="separator:a3872f0931688c3a994f9145dba67a322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f7f191ff357297913a67bb1968aaea"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classface__seg_1_1_face_seg.html#a63f7f191ff357297913a67bb1968aaea">FaceSeg</a> (const std::string &amp;deploy_file, const std::string &amp;model_file, bool with_gpu=true, int gpu_device_id=0)</td></tr>
+<tr class="memdesc:a63f7f191ff357297913a67bb1968aaea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct <a class="el" href="classface__seg_1_1_face_seg.html" title="This class provided deep face segmentation using Caffe with a fully connected convolutional neural ne...">FaceSeg</a> instance.  <a href="#a63f7f191ff357297913a67bb1968aaea">More...</a><br /></td></tr>
+<tr class="separator:a63f7f191ff357297913a67bb1968aaea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3296c135181c46c1c22b19c0421f8b18"><td class="memItemLeft" align="right" valign="top">cv::Mat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classface__seg_1_1_face_seg.html#a3296c135181c46c1c22b19c0421f8b18">process</a> (const cv::Mat &amp;img)</td></tr>
 <tr class="memdesc:a3296c135181c46c1c22b19c0421f8b18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Do face segmentation.  <a href="#a3296c135181c46c1c22b19c0421f8b18">More...</a><br /></td></tr>
 <tr class="separator:a3296c135181c46c1c22b19c0421f8b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,9 +153,9 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>MR</b> = 122.6
 <tr class="separator:ae7ed2a8b0a6e608d4854c91352cf31ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This class provided face segmentation using Caffe with a fully connected convolutional neural network. </p>
+<div class="textblock"><p>This class provided deep face segmentation using Caffe with a fully connected convolutional neural network. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a3872f0931688c3a994f9145dba67a322"></a>
+<a class="anchor" id="a63f7f191ff357297913a67bb1968aaea"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -169,7 +169,7 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>MR</b> = 122.6
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>caffe_model_file</em>, </td>
+          <td class="paramname"><em>model_file</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -191,11 +191,11 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>MR</b> = 122.6
       </table>
 </div><div class="memdoc">
 
-<p>Construct <a class="el" href="classface__seg_1_1_face_seg.html" title="This class provided face segmentation using Caffe with a fully connected convolutional neural network...">FaceSeg</a> instance. </p>
+<p>Construct <a class="el" href="classface__seg_1_1_face_seg.html" title="This class provided deep face segmentation using Caffe with a fully connected convolutional neural ne...">FaceSeg</a> instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">deploy_file</td><td>Network definition file for deployment (.prototxt). </td></tr>
-    <tr><td class="paramname">deploy_file</td><td>Network weights model file (.caffemodel). </td></tr>
+    <tr><td class="paramname">model_file</td><td>Network weights model file (.caffemodel). </td></tr>
     <tr><td class="paramname">with_gpu</td><td>Toggle GPU. </td></tr>
     <tr><td class="paramname">gpu_device_id</td><td>Set the GPU's device id. </td></tr>
   </table>
