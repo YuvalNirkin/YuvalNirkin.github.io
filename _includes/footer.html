@@ -1,0 +1,19 @@
+<footer>
+
+  <div class="footer-wrap">
+
+    <div class="footer-tagline">
+      <p>{{ site.data.settings.footer }}</p>
+    </div>
+
+    <div class="social-media">
+      <nav>
+        {% for item in site.data.settings.social %}
+          <a href="{{ item.link }}"><i class="fa fa-{{ item.icon }}" aria-hidden="true" target="_blank"></i></a>
+        {% endfor %}
+      </nav>
+    </div>
+
+  </div>
+
+</footer>

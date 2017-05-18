@@ -1,0 +1,62 @@
+#-------------------------------
+# General Site Settings
+
+title: Yuval Nirkin
+description: Computer Vision Expert
+email: yuval.nirkin@gmail.com
+
+menu:
+- {name: 'Projects', url: ''}
+- {name: 'Publications', url: 'publications.html'}
+#- {name: 'Blog', url: 'blog.html'}
+- {name: 'About', url: 'about.html'}
+
+#-------------------------------
+# SEO Section
+
+# NOTE: Providing SEO information will make this website more searchable on the internet.
+
+seo:
+  description: 'Personal portfolio powered by Jekyll and GitHub Pages'
+  rel-author: 'https://plus.google.com/u/0/113172714259379471433'
+  rel-publisher: 'https://plus.google.com/u/0/113172714259379471433'
+
+#-------------------------------
+# Google Analytics Section
+
+# Analytics helps you understand who visits your website.
+# Learn more at: http://support.google.com/analytics/answer/1008065
+
+# NOTE: If you want to use Google Analytics for basic web tracking: Just uncomment and enter your UA-Code here.
+
+#google-analytics-ua: UA-XXXXXX-X
+
+#-------------------------------
+# projects Section
+
+projects:
+- {name: 'Face Swap', folder: 'face_swap', link: 'https://github.com/YuvalNirkin/face_swap'}
+- {name: 'Face Segmentation', folder: 'face_segmentation', link: 'https://github.com/YuvalNirkin/face_segmentation'}
+- {name: 'Face Video Segment', folder: 'face_video_segment', link: 'https://github.com/YuvalNirkin/face_video_segment'}
+- {name: 'Find Face Landmarks', folder: 'find_face_landmarks', link: 'https://github.com/YuvalNirkin/find_face_landmarks'}
+- {name: 'Camera Calibration', folder: 'camera_calibration', link: 'https://github.com/YuvalNirkin/camera_calibration'}
+- {name: 'Dense Correspondences across Scenes and Scales - OpenCV Contribution', folder: 'dense_correspondences_opencv', link: 'https://github.com/YuvalNirkin/opencv_contrib/tree/DenseSIFT'}
+- {name: 'Dense Correspondences across Scenes and Scales - 3D Reconstruction Pipeline', folder: 'dense_correspondences_reconstruction', link: 'https://github.com/YuvalNirkin/DenseCorrespondences'}
+#- {name: 'Free Code Camp Projects', folder: 'proj-3', file: 'work/proj-3.html'}
+#- {name: 'Lagrange Jekyll Theme', folder: 'proj-1', file: 'work/proj-1.html'}
+#- {name: 'Millennial Jekyll Theme', folder: 'proj-2', file: 'work/proj-2.html'}
+#- {name: 'Personal Portfolio Website', folder: 'proj-4', file: 'work/proj-4.html'}
+
+#-------------------------------
+# Contact Section
+
+footer: Follow me below
+
+social:
+- {icon: 'facebook', link: 'https://www.facebook.com/ynirkin'}
+- {icon: 'linkedin', link: 'https://www.linkedin.com/in/ynirkin/'}
+- {icon: 'github', link: 'https://github.com/YuvalNirkin'}
+- {icon: 'youtube', link: 'https://www.youtube.com/channel/UC3jJoAIA1tXv3ZgKrNXalTg'}
+- {icon: 'envelope', link: 'mailto:yuval.nirkin@gmail.com'}
+
+# social network icons available: 'twitter' / 'facebook' / 'github' / 'pinterest' 'google-plus' / 'linkedin' / 'youtube' / 'instagram' / 'dribbble' / 'behance' / 'soundcloud' / 'vine'
