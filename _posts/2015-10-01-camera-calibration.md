@@ -3,7 +3,7 @@ layout: post
 title: Camera Calibration
 date: 2015-10-01 00:00:00 +0200
 description: # Add post description (optional)
-img: camera_calibration_teaser.jpg # Add image post (optional)
+img: projects/camera_calibration_teaser.jpg # Add image post (optional)
 tags: [Camera, Calibration, Fisheye] # add tag
 type: project
 ---

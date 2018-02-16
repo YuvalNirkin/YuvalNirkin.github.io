@@ -3,7 +3,7 @@ layout: post
 title: Face Video Segment
 date: 2016-03-01 00:00:00 +0200
 description: # Add post description (optional)
-img: face_video_segment_teaser.jpg # Add image post (optional)
+img: projects/face_video_segment_teaser.jpg # Add image post (optional)
 tags: [Face, Video, Segmentation] # add tag
 type: project
 ---

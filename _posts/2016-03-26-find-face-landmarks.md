@@ -3,7 +3,7 @@ layout: post
 title: Find Face Landmarks
 date: 2016-03-26 00:00:00 +0200
 description: # Add post description (optional)
-img: find_face_landmarks_teaser.png # Add image post (optional)
+img: projects/find_face_landmarks_teaser.jpg # Add image post (optional)
 tags: [Face Landmarks] # add tag
 type: project
 ---
