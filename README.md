@@ -1,3 +1,15 @@
-# Personal Portfolio Theme
+# Flexible-Jekyll is a simple and clean theme for Jekyll
 
-This is my personal portfolio theme that I built from the ground up, using the [DevTips Starter Kit](http://devtipsstarterkit.com/) as a foundation for starting, and following closely the amazing tutorial by [Travis Neilson over at DevTips](https://www.youtube.com/watch?v=T6jKLsxbFg4&list=PL0CB3OvPhDA_STygmp3sDenx3UpdOMk7P). You can [check out the demo](lenpaul.github.io/portfolio/), and [fork the repository](https://github.com/LeNPaul/portfolio/fork), to get started.
+## Demo
+
+Add sidebar menu for [Flexible-Jekyll](https://github.com/artemsheludko/flexible-jekyll/) theme
+
+![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll.gif)
+
+The responsive sidebar menu looks like:
+
+![](https://github.com/shaoanlu/shaoanlu.github.io/blob/master/assets/img/flexible_jekyll2.gif)
+
+### License
+
+GNU General Public License v3.0
