@@ -3,7 +3,7 @@ layout: post
 title: Dense Correspondences
 date: 2015-09-01 00:00:00 +0200
 description: # Add post description (optional)
-img: projects/dense_correspondences/dense_correspodences_teaser.jpg # Add image post (optional)
+img: projects/dense_correspondences/dense_correspondences_teaser.jpg # Add image post (optional)
 tags: [SIFT, Optical Flow, 3D Reconstruction] # add tag
 type: project
 ---
