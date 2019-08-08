@@ -4,6 +4,7 @@ title: On Face Segmentation, Face Swapping, and Face Perception
 date: 2017-04-22 00:00:00 +0200
 description: # Add post description (optional)
 img: publications/face_swap_paper_teaser.jpg # Add image post (optional)
+post_img: publications/face_swap_paper_teaser.jpg
 tags: [Face Swapping, Face Segmentation, Face Recognition] # add tag
 type: publication
 ---

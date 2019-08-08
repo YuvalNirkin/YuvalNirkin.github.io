@@ -4,6 +4,7 @@ title: Extreme 3D Face Reconstruction - Looking Past Occlusions
 date: 2017-12-14 00:00:00 +0200
 description: # Add post description (optional)
 img: publications/extreme_3d_faces_teaser.jpg # Add image post (optional)
+post_img: publications/extreme_3d_faces_teaser.jpg
 tags: [Face, 3D Reconstruction, Occlusions] # add tag
 type: publication
 ---
