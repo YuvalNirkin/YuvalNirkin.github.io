@@ -20,7 +20,8 @@ Over the past years, memes (captioned photos intended to elicit humor and other 
 
 Memes have been shown to serve many purposes, such as entertainment and marketing. However, the wide usage of memes does have a negative side to it, as there are memes that combine certain texts and photos in ways that are being used to hurt a person&#39;s or group&#39;s feelings, we will refer to those as &quot;Hateful Memes&quot; (HMs).
 
-Notice that, while the combination of text and image may be hateful, in many cases both the text and the image are not considered hateful on their own. This can be seen in the above figure, where meme **A1** is hateful while memes **A2, A3** are not and **B1** is hateful while **B2, B3** are not.
+![Fig 0: Overview]({{site.baseurl}}/assets/img/projects/hateful_memes/fig0_overview.jpg)
+> **Memes examples.** The examples illustrate that while the combination of text and image may be hateful, in many cases both the text and the image are not considered hateful on their own. Top row: meme **A1** is hateful while memes **A2, A3** are not. Bottom row: **B1** is hateful while **B2, B3** are not.
 
 Since those HMs could potentially be harmful as they may be used for cyberbullying and incitement, it would be very beneficial to be able to identify a HM on social networks, thus enabling us to block or report the HM. However, at the massive scale of the internet, the task of detecting multimodal hate is both extremely important and particularly difficult.
 
