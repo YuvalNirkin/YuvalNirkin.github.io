@@ -193,7 +193,7 @@ As can be seen in the figure, our model consists of three main components: the l
 
 **Vision Model**
 
-Our vision model is based on the Mobilenet V2 [[6]](https://arxiv.org/abs/1801.04381) architecture, as it is both fast and memory efficient and is well suited for limited hardware. Given an input image $$I\in\mathbb{R}^{3\times800\times800}$$ the vision model outputs an embedding vector $$E_v \in \mathbb{R}^{768}$$ which is then fed to the weight mapping module.
+Our vision model is based on the Mobilenet V2 [[6]](https://arxiv.org/abs/1801.04381) architecture, as it is both fast and memory efficient and is well suited for limited hardware. Given an input image $I\in\mathbb{R}^{3\times800\times800}$ the vision model outputs an embedding vector $$E_v \in \mathbb{R}^{768}$$ which is then fed to the weight mapping module.
 
 **Weight Mapping**
 
