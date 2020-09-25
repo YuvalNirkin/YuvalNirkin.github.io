@@ -103,51 +103,36 @@ A Hypernetwork [[8]](https://arxiv.org/abs/1609.09106) is a network that predict
 
 Since our dataset is inherently divided into two parts:
 
-· images dataset
-
-· text dataset
+* images dataset
+* text dataset
 
 we will attempt to extract feature independently for each part:
 
-·Image dataset features:
+* Image dataset features:
 
--Mean value for each RGB coordinate in the picture
+>* Mean value for each RGB coordinate in the picture
+>* Standard deviation for each RGB coordinate in the picture
+>* Image width
+>* Image height
+>* Image width to height ratio
+>* Image caption:
+>   * Image caption is a text with one or more sentences describing the image.
+>   * The Image captioning was performed using deep learning method combining two neural networks:
+>      * CNN – used to compress the input images
+>      * LSTM – used to generate a sentence out of the compressed image
+>
+> The combined network will be trained using COCO dataset.
+>
+>* Caption profanity probability:
+>   * Using &quot;profanity&quot; library
 
--Standard deviation for each RGB coordinate in the picture
+* Text dataset features:
 
--Image width
-
--Image height
-
--Image width to height ratio
-
--Image caption:
-
-§Image caption is a text with one or more sentences describing the image.
-
-§The Image captioning was performed using deep learning method combining two neural networks:
-
-§CNN – used to compress the input images
-
-§LSTM – used to generate a sentence out of the compressed image
-
-The combined network will be trained using COCO dataset.
-
--Caption profanity probability:
-
-§Using &quot;profanity&quot; library
-
-·Text dataset features:
-
--Words contained in the sentence
-
--Number of words in the sentence
-
--Number of subparts in the text
-
--Text profanity probability
-
-§Using &quot;profanity&quot; library
+>* Words contained in the sentence
+>* Number of words in the sentence
+>* Number of subparts in the text
+>* Text profanity probability
+>   * Using &quot;profanity&quot; library
 
 The full EDA can be found in the relevant GitHub folder.
 
@@ -155,23 +140,23 @@ From analyzing the described features we can see a few features that can seeming
 
 \*In all the following graphs red symbolizes the non-hateful memes and blue symbolizes the hateful ones.
 
--Width :
+* Width :
 
 ![Fig 2]({{site.baseurl}}/assets/img/projects/hateful_memes/fig2.png)
 
-we can see that the hateful memes are more likely to be of bigger width than the non-hateful ones
+> We can see that the hateful memes are more likely to be of bigger width than the non-hateful ones
 
--Height :
+* Height :
 
 ![Fig 3]({{site.baseurl}}/assets/img/projects/hateful_memes/fig3.png)
 
-we can see that the non -hateful memes are more likely to be of smaller height while the non-hateful ones height is relatively balanced
+> We can see that the non -hateful memes are more likely to be of smaller height while the non-hateful ones height is relatively balanced
 
--Text profanity :
+* Text profanity :
 
 ![Fig 4]({{site.baseurl}}/assets/img/projects/hateful_memes/fig4.png)
 
-The graph suggests that a hateful meme text is more likely to contain profanity.
+> The graph suggests that a hateful meme text is more likely to contain profanity.
 
 Since an image can be cropped or resized, it is reasonable to assume that the height and width will not provide a good indicator for the meme being hateful. However, the image dimensions along with the mean and std of each RGB coordinate do provide valuable information for the final classifier construction. On the other hand, the text profanity feature might be a good indicator for hateful-memes as we will show.
 
@@ -179,17 +164,17 @@ Since an image can be cropped or resized, it is reasonable to assume that the he
 
 In order to roughly assess the quality of extracted features we will make two separate simple classifiers using those features:
 
--Logistic regression classifier:
+- Logistic regression classifier:
 
-§Using logistic regression we got the following :
+  - Using logistic regression we got the following :
 
 ![Fig 5]({{site.baseurl}}/assets/img/projects/hateful_memes/fig5.png)
 
-§From the model coefficients we can deduce that the most dominant feature is, as we expected, is the text profanity feature.
+  - From the model coefficients we can deduce that the most dominant feature is, as we expected, is the text profanity feature.
 
--SVM classifier:
+- SVM classifier:
 
-§Using SVM we got the following:
+  - Using SVM we got the following:
 
 ![Fig 6]({{site.baseurl}}/assets/img/projects/hateful_memes/fig6.png) 
 
@@ -198,21 +183,21 @@ Overall we can deduce that from the various features we extracted, the most prom
 
 ## Method Description
 
-The hateful memes challenge requires combining two very different domains: text and images. The first is of a sequential structure while the latter is spatial. Taking this into consideration together with our limited training hardware options we opted for an efficient solution, and therefore we decided to base our method on the hypernetwork [8]. The hypernetwork is a network that predicts the weights of another larger network, allowing us to bridge our two different domains without explicitly combining their embeddings which can make the model unnecessarily large. Our method overview is depicted in Figure 1.
+The hateful memes challenge requires combining two very different domains: text and images. The first is of a sequential structure while the latter is spatial. Taking this into consideration together with our limited training hardware options we opted for an efficient solution, and therefore we decided to base our method on the hypernetwork [[8]](https://arxiv.org/abs/1609.09106). The hypernetwork is a network that predicts the weights of another larger network, allowing us to bridge our two different domains without explicitly combining their embeddings which can make the model unnecessarily large. Our method overview is depicted in Figure 1.
 
 ![Fig 7]({{site.baseurl}}/assets/img/projects/hateful_memes/hateful_memes_architectue.jpg) 
 
-Figure 7: Our method pipeline. Upper left: the language model which produces the text embedding. Bottom left: the visual encoder containing the visual model and a weight mapping model. Right: the decoder that produces the final prediction.
+> Figure 7: Our method pipeline. Upper left: the language model which produces the text embedding. Bottom left: the visual encoder containing the visual model and a weight mapping model. Right: the decoder that produces the final prediction.
 
-As can be seen in the figure, our model consists of three main components: the language encoder, the visual encoder, and the decoder. The language model is based on SBert, it accepts the image&#39;s text and produces the text embedding . The vision model accepts the image as input and produces the visual embedding , which is then fed to the weight mapping module, producing a set of weights . The decoder is defined as a function , accepting the text embedding and the weights , that outputs the final binary prediction, is the image hateful or not hateful?
+As can be seen in the figure, our model consists of three main components: the language encoder, the visual encoder, and the decoder. The language model is based on SBert, it accepts the image&#39;s text and produces the text embedding $$E_t$$. The vision model accepts the image as input and produces the visual embedding $$E_v$$, which is then fed to the weight mapping module, producing a set of weights $$\theta$$. The decoder is defined as a function $$f(E_t,\theta)$$, accepting the text embedding $$E_t$$ and the weights $$\theta$$, that outputs the final binary prediction, is the image hateful or not hateful?
 
 **Vision Model**
 
-Our vision model is based on the Mobilenet V2 [6] architecture, as it is both fast and memory efficient and is well suited for limited hardware. Given an input image the vision model outputs an embedding vector which is then fed to the weight mapping module.
+Our vision model is based on the Mobilenet V2 [[6]](https://arxiv.org/abs/1801.04381) architecture, as it is both fast and memory efficient and is well suited for limited hardware. Given an input image $$I\in\mathbb{R}^{3\times800\times800}$$ the vision model outputs an embedding vector $$E_v \in \mathbb{R}^{768}$$ which is then fed to the weight mapping module.
 
 **Weight Mapping**
 
-The weight mapping module receives an embedding vector as input and outputs a set of weights matrices corresponding to the n linear layers in the decoder. The weight mapping module consists of multiple linear layers each receiving a part of the input vector that is directly related to the number of parameters required by the specific decoder layer, the more parameters the larger the relative part of the input vector that will be received.
+The weight mapping module receives an embedding vector as input and outputs a set of weights matrices $$W_1,W_2,\dots,W_n$$ corresponding to the n linear layers in the decoder. The weight mapping module consists of multiple linear layers each receiving a part of the input vector that is directly related to the number of parameters required by the specific decoder layer, the more parameters the larger the relative part of the input vector that will be received.
 
 **Decoder**
 
@@ -220,7 +205,7 @@ The decoder is a meta network built as a multilayer perceptron (MLP), it receive
 
 **Training**
 
-We train our model end-to-end, with the vision model pretrained on ImageNet [11], and the weight mapping module is initialized by random values drawn from the normal distribution. The language model is pretrained on Wikipedia [12] and its weights remain frozen for the entire training process. We train our model using the Adam optimizer () with learning rate 0.0001 which we decrease by half every five epochs, and a batch size of 4. All images are resized and padded to a resolution of 800x800, and randomly horizontally flipped with probability 0.5.
+We train our model end-to-end, with the vision model pretrained on ImageNet [11], and the weight mapping module is initialized by random values drawn from the normal distribution. The language model is pretrained on Wikipedia [12] and its weights remain frozen for the entire training process. We train our model using the Adam optimizer ($$\beta_1=0.5,\beta_2=0.999$$) with learning rate 0.0001 which we decrease by half every five epochs, and a batch size of 4. All images are resized and padded to a resolution of 800x800, and randomly horizontally flipped with probability 0.5.
 
 ## Results
 
